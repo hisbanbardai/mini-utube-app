@@ -1,14 +1,14 @@
 import "./Header.css";
-import HambugerIcon from "../HamburgerIcon/HamburgerIcon";
 import Logo from "../Logo/Logo";
 import SearchBar from "../SearchBar/SearchBar";
 import NavIcons from "../NavIcons/NavIcons";
+import HamburgerIcon from "../HamburgerIcon/HamburgerIcon";
 
 export default function Header() {
   return (
     <header className="header">
       <div className="header-left">
-        <HambugerIcon />
+        <HamburgerIcon />
         <Logo />
       </div>
       <div className="header-middle">

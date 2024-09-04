@@ -10,7 +10,7 @@ export default function NavIcons() {
       <img src={upload} className="upload-image" alt="" />
       <img src={more} className="more-image" alt="" />
       <img src={notification} className="notification-image" alt="" />
-      <img src={jack} className="jack-image" alt="" />
+      <img src={jack} className="user-image" alt="" />
     </>
   );
 }
