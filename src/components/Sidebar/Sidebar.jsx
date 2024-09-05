@@ -10,58 +10,34 @@ import blogs from "../../assets/blogs.png";
 import news from "../../assets/news.png";
 import jack from "../../assets/jack.png";
 import simon from "../../assets/simon.png";
+import tom from "../../assets/tom.png";
+import megan from "../../assets/megan.png";
+import cameron from "../../assets/cameron.png";
+import CategoryLink from "../CategoryLink/CategoryLink";
+import SubscribedChannel from "../SubscribedChannel/SubscribedChannel";
 
 export default function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="categories-links">
-        <div className="category-link">
-          <img src={home} alt="" />
-          <span>Home</span>
-        </div>
-        <div className="category-link">
-          <img src={game} alt="" />
-          <span>Gaming</span>
-        </div>
-        <div className="category-link">
-          <img src={automobiles} alt="" />
-          <span>Automobiles</span>
-        </div>
-        <div className="category-link">
-          <img src={sports} alt="" />
-          <span>Sports</span>
-        </div>
-        <div className="category-link">
-          <img src={entertainment} alt="" />
-          <span>Entertainment</span>
-        </div>
-        <div className="category-link">
-          <img src={technology} alt="" />
-          <span>Technology</span>
-        </div>
-        <div className="category-link">
-          <img src={music} alt="" />
-          <span>Music</span>
-        </div>
-        <div className="category-link">
-          <img src={blogs} alt="" />
-          <span>Blogs</span>
-        </div>
-        <div className="category-link">
-          <img src={news} alt="" />
-          <span>New</span>
-        </div>
+        <CategoryLink image={home} name={"Home"} />
+        <CategoryLink image={game} name={"Gaming"} />
+        <CategoryLink image={automobiles} name={"Automobiles"} />
+        <CategoryLink image={sports} name={"Sports"} />
+        <CategoryLink image={entertainment} name={"Entertainment"} />
+        <CategoryLink image={technology} name={"Technology"} />
+        <CategoryLink image={music} name={"Music"} />
+        <CategoryLink image={blogs} name={"Blogs"} />
+        <CategoryLink image={news} name={"News"} />
       </div>
+      <div className="border"></div>
       <div className="subscribed-channels-list">
-        <h5 className="subscribed-heading"></h5>
-        <div className="subscribed-channel">
-          <img src={jack} alt="" />
-          <span>PewDiePie</span>
-        </div>
-        <div className="subscribed-channel">
-          <img src={simon} alt="" />
-          <span>MrBeast</span>
-        </div>
+        <h5 className="subscribed-heading">Subscribed</h5>
+        <SubscribedChannel image={jack} name={"PewDiePie"} />
+        <SubscribedChannel image={simon} name={"MrBeast"} />
+        <SubscribedChannel image={tom} name={"Justin Bieber"} />
+        <SubscribedChannel image={megan} name={"5-Minute Crafts"} />
+        <SubscribedChannel image={cameron} name={"Nas Daily"} />
       </div>
     </aside>
   );

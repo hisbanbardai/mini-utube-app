@@ -1,0 +1,39 @@
+.sidebar {
+  padding: 2rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 15%;
+  position: fixed;
+  height: calc(100vh - 6rem);
+  top: 6rem;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
+}
+
+.sidebar:hover {
+  overflow-y: auto;
+}
+
+.border {
+  border-top: 1px solid #5a5a5a;
+}
+
+.categories-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.subscribed-channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.subscribed-heading {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}

@@ -1,0 +1,15 @@
+.category-link {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  cursor: pointer;
+}
+
+.category-link img {
+  height: 2rem;
+}
+
+.category-link span {
+  font-size: 1.6rem;
+  color: #000;
+}

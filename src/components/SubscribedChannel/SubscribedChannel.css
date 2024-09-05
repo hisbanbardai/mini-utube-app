@@ -1,0 +1,16 @@
+.subscribed-channel {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  cursor: pointer;
+}
+
+.subscribed-channel span {
+  font-size: 1.3rem;
+  color: #000;
+}
+
+.subscribed-channel img {
+  height: 2.4rem;
+  border-radius: 50%;
+}
