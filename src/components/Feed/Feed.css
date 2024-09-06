@@ -1,0 +1,13 @@
+.feed-container {
+  margin-left: 20rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  max-width: 130rem;
+  padding: 3rem 3rem;
+  column-gap: 2rem;
+  row-gap: 3rem;
+}
+
+.large {
+  margin-left: 5rem;
+}

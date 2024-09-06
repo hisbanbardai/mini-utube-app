@@ -15,10 +15,14 @@ import megan from "../../assets/megan.png";
 import cameron from "../../assets/cameron.png";
 import CategoryLink from "../CategoryLink/CategoryLink";
 import SubscribedChannel from "../SubscribedChannel/SubscribedChannel";
+import { useRecoilValue } from "recoil";
+import { sidebarAtom } from "../../atoms/sidebarAtom";
 
 export default function Sidebar() {
+  const sidebar = useRecoilValue(sidebarAtom);
+
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${sidebar ? "" : "close"}`}>
       <div className="categories-links">
         <CategoryLink image={home} name={"Home"} />
         <CategoryLink image={game} name={"Gaming"} />

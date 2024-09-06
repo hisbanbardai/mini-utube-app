@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 9px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: black;
+}
+
+.channel-name {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.video-stats {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
