@@ -1,4 +1,5 @@
 import ChannelInfo from "../../components/ChannelInfo/ChannelInfo";
+import Comments from "../../components/Comments/Comments";
 import SuggestedVideos from "../../components/SuggestedVideos/SuggestedVideos";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
@@ -11,6 +12,7 @@ export default function Video() {
       <SuggestedVideos />
       <VideoDetails />
       <ChannelInfo />
+      <Comments />
     </div>
   );
 }

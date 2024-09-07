@@ -1,0 +1,46 @@
+.comment {
+  display: flex;
+  gap: 2rem;
+}
+
+.comment-image {
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.comment-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.comment-info {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.comment-username {
+  font-weight: 600;
+  color: #000000;
+}
+
+.comment-time {
+  font-size: 1.25rem;
+}
+
+.comment-action-buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.comment-action-button {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.comment-action-button img {
+  height: 2rem;
+}
