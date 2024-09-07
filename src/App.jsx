@@ -19,7 +19,7 @@ function App() {
           }
         />
         <Route
-          path="/video/:categoryId:videoId"
+          path="/video/:categoryId/:videoId"
           element={
             <Suspense fallback={"Loading..."}>
               {" "}

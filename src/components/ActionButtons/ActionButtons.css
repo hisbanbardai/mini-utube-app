@@ -1,0 +1,18 @@
+.video-action-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.video-action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.video-action-buttons img {
+  height: 2rem;
+}
+
+.video-action-buttons span {
+  font-size: 1.5rem;
+}

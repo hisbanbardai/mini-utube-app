@@ -1,0 +1,21 @@
+.video-details {
+  grid-column: 1;
+}
+
+.video-title {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 0.6rem;
+}
+
+.video-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.wrapper-stats {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 1.5rem;
+}
