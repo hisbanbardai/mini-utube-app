@@ -1,0 +1,33 @@
+.recommended-video {
+  display: flex;
+  gap: 1rem;
+}
+
+.recommended-video-image {
+  height: 13rem;
+}
+
+.recommended-video-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.recommended-video-title {
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.recommended-video-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommended-video-channel-name {
+  font-size: 1.4rem;
+}
+
+.recommended-video-video-views {
+  font-size: 1.3rem;
+}

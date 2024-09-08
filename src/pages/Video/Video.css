@@ -1,6 +1,8 @@
 .video-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
   column-gap: 2rem;
   padding: 8rem 0 2rem 3rem;
   row-gap: 1rem;
