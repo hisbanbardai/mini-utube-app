@@ -40,9 +40,14 @@ const categories = [
     image: sports,
   },
   {
-    id: 28,
+    id: 24,
     name: "Entertainment",
     image: entertainment,
+  },
+  {
+    id: 28,
+    name: "Technology",
+    image: technology,
   },
   {
     id: 10,

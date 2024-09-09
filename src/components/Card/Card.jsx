@@ -1,20 +1,25 @@
+import { Link } from "react-router-dom";
 import "./Card.css";
+import { converter, date } from "../../utility";
+import moment from "moment";
 
-export default function Card({ image }) {
+export default function Card({ item }) {
   return (
-    <div className="card">
-      <img className="card-image" src={image} alt="" />
+    <Link to={`video/${item.snippet.categoryId}/${item.id}`} className="card">
+      <img
+        className="card-image"
+        src={item.snippet.thumbnails.medium.url}
+        alt=""
+      />
       <div className="card-text">
-        <p className="card-title">
-          Best channel to learn coding that helps you to be a web developer
-        </p>
-        <p className="channel-name">Greatstack</p>
+        <p className="card-title">{item.snippet.title}</p>
+        <p className="channel-name">{item.snippet.channelTitle}</p>
         <div className="video-stats">
-          <p className="views">15M Views </p>
+          <p className="views">{converter(item.statistics.viewCount)} Views</p>
           <p>&bull;</p>
-          <p className="date">a day ago</p>
+          <p className="date">{moment(item.snippet.publishedAt).fromNow()} </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

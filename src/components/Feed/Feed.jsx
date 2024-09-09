@@ -8,30 +8,30 @@ import thumbnail5 from "../../assets/thumbnail5.png";
 import thumbnail6 from "../../assets/thumbnail6.png";
 import thumbnail7 from "../../assets/thumbnail7.png";
 import thumbnail8 from "../../assets/thumbnail8.png";
-import { useRecoilValue } from "recoil";
+import {
+  useRecoilState,
+  useRecoilValue,
+  useRecoilValueLoadable,
+  useSetRecoilState,
+} from "recoil";
 import { sidebarAtom } from "../../atoms/sidebarAtom";
+import { categoryIdAtom } from "../../atoms/categoryIdAtom";
+import { categoryBasedVideosAtomFamily } from "../../atoms/categoryBasedVideosAtomFamily";
 
 export default function Feed() {
   const sidebar = useRecoilValue(sidebarAtom);
+  const categoryId = useRecoilValue(categoryIdAtom);
+  const data = useRecoilValueLoadable(
+    categoryBasedVideosAtomFamily(categoryId)
+  );
 
   return (
-    <div className={`feed-container ${sidebar ? "" : "large"}`}>
-      <Card image={thumbnail1} />
-      <Card image={thumbnail2} />
-      <Card image={thumbnail3} />
-      <Card image={thumbnail4} />
-      <Card image={thumbnail5} />
-      <Card image={thumbnail6} />
-      <Card image={thumbnail7} />
-      <Card image={thumbnail8} />
-      <Card image={thumbnail1} />
-      <Card image={thumbnail2} />
-      <Card image={thumbnail3} />
-      <Card image={thumbnail4} />
-      <Card image={thumbnail5} />
-      <Card image={thumbnail6} />
-      <Card image={thumbnail7} />
-      <Card image={thumbnail8} />
-    </div>
+    data.state === "hasValue" && (
+      <div className={`feed-container ${sidebar ? "" : "large"}`}>
+        {data.contents.map((item) => (
+          <Card key={item.id} item={item} />
+        ))}
+      </div>
+    )
   );
 }
