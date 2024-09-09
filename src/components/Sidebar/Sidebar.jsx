@@ -18,21 +18,58 @@ import SubscribedChannel from "../SubscribedChannel/SubscribedChannel";
 import { useRecoilValue } from "recoil";
 import { sidebarAtom } from "../../atoms/sidebarAtom";
 
+const categories = [
+  {
+    id: 0,
+    name: "Home",
+    image: home,
+  },
+  {
+    id: 20,
+    name: "Gaming",
+    image: game,
+  },
+  {
+    id: 2,
+    name: "Automobiles",
+    image: automobiles,
+  },
+  {
+    id: 17,
+    name: "Sports",
+    image: sports,
+  },
+  {
+    id: 28,
+    name: "Entertainment",
+    image: entertainment,
+  },
+  {
+    id: 10,
+    name: "Music",
+    image: music,
+  },
+  {
+    id: 22,
+    name: "Blogs",
+    image: blogs,
+  },
+  {
+    id: 25,
+    name: "News",
+    image: news,
+  },
+];
+
 export default function Sidebar() {
   const sidebar = useRecoilValue(sidebarAtom);
 
   return (
     <aside className={`sidebar ${sidebar ? "" : "close"}`}>
       <div className="categories-links">
-        <CategoryLink image={home} name={"Home"} />
-        <CategoryLink image={game} name={"Gaming"} />
-        <CategoryLink image={automobiles} name={"Automobiles"} />
-        <CategoryLink image={sports} name={"Sports"} />
-        <CategoryLink image={entertainment} name={"Entertainment"} />
-        <CategoryLink image={technology} name={"Technology"} />
-        <CategoryLink image={music} name={"Music"} />
-        <CategoryLink image={blogs} name={"Blogs"} />
-        <CategoryLink image={news} name={"News"} />
+        {categories.map(({ id, image, name }) => (
+          <CategoryLink key={id} image={image} name={name} id={id} />
+        ))}
       </div>
       <div className="border"></div>
       <div className="subscribed-channels-list">

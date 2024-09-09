@@ -13,3 +13,13 @@
   font-size: 1.6rem;
   color: #000;
 }
+
+.category-link.active img {
+  border-bottom: solid red 3px;
+  padding-bottom: 2px;
+}
+
+.category-link.active span {
+  color: red;
+  font-weight: 500;
+}
