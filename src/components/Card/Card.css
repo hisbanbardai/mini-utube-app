@@ -26,7 +26,7 @@
   font-weight: 500;
 }
 
-.video-stats {
+.card-text .video-stats {
   display: flex;
   gap: 0.5rem;
   font-size: 1.4rem;
