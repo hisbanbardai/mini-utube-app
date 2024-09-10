@@ -9,7 +9,6 @@ export const categoryBasedVideosAtomFamily = atomFamily({
     get:
       (id) =>
       async ({ get }) => {
-        await new Promise((r) => setTimeout(r, 5000));
         const res = await axios.get(
           `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${id}&key=${apiKey}`
         );
