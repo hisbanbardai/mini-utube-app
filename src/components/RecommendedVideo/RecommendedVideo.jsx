@@ -1,17 +1,26 @@
 import "./RecommendedVideo.css";
+import { converter } from "../../utility";
+import { Link } from "react-router-dom";
 
-export default function RecommendedVideo({ image }) {
+export default function RecommendedVideo({ item }) {
   return (
     <div className="recommended-video">
-      <img className="recommended-video-image" src={image} alt="" />
+      <Link to={`/video/${item.snippet.categoryId}/${item.id}`}>
+        <img
+          className="recommended-video-image"
+          src={item?.snippet.thumbnails.medium.url}
+          alt=""
+        />
+      </Link>
       <div className="recommended-video-text">
-        <p className="recommended-video-title">
-          This Japanese game looks like so much fun! (@gurukafa on IG) #shorts
-          #japan
-        </p>
+        <p className="recommended-video-title">{item?.snippet.title}</p>
         <div className="recommended-video-info">
-          <p className="recommended-video-channel-name">JapanKlips</p>
-          <p className="recommended-video-video-views">36M Views</p>
+          <p className="recommended-video-channel-name">
+            {item?.snippet.channelTitle}
+          </p>
+          <p className="recommended-video-video-views">
+            {converter(item?.statistics.viewCount)} Views
+          </p>
         </div>
       </div>
     </div>

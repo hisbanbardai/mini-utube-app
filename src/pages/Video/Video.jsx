@@ -7,8 +7,9 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import "./Video.css";
 import { useEffect } from "react";
 import axios from "axios";
-import { useRecoilState, useSetRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { videoDataAtom } from "../../atoms/videoDataAtom";
+import { categoryIdAtom } from "../../atoms/categoryIdAtom";
 const apiKey = import.meta.env.VITE_API_KEY;
 
 export default function Video() {
@@ -34,10 +35,10 @@ export default function Video() {
   return (
     <div className="video-container">
       <VideoPlayer videoId={videoId} />
-      <RecommendedVideos />
+      <RecommendedVideos categoryId={categoryId} />
       <VideoDetails />
       <ChannelInfo />
-      <Comments />
+      <Comments videoId={videoId} />
     </div>
   );
 }

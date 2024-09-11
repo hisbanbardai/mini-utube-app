@@ -8,18 +8,33 @@ import thumbnail5 from "../../assets/thumbnail5.png";
 import thumbnail6 from "../../assets/thumbnail6.png";
 import thumbnail7 from "../../assets/thumbnail7.png";
 import thumbnail8 from "../../assets/thumbnail8.png";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { recommendedVideosAtom } from "../../atoms/recommendedVideosAtom";
+import { useEffect } from "react";
+import axios from "axios";
+const apiKey = import.meta.env.VITE_API_KEY;
 
-export default function RecommendedVideos() {
+export default function RecommendedVideos({ categoryId }) {
+  console.log("recommended videos rendering");
+
+  const [data, setData] = useRecoilState(recommendedVideosAtom);
+
+  useEffect(() => {
+    async function fetchRecommendedVideosData() {
+      const res = await axios.get(
+        `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${categoryId}&key=${apiKey}`
+      );
+      setData(res.data.items);
+    }
+    fetchRecommendedVideosData();
+  }, [categoryId, setData]);
+
+  // const data = useRecoilValue(categoryBasedVideosAtomFamily(categoryId));
+
   return (
     <div className="recommended-videos-container">
-      <RecommendedVideo image={thumbnail1} />
-      <RecommendedVideo image={thumbnail2} />
-      <RecommendedVideo image={thumbnail3} />
-      <RecommendedVideo image={thumbnail4} />
-      <RecommendedVideo image={thumbnail5} />
-      <RecommendedVideo image={thumbnail6} />
-      <RecommendedVideo image={thumbnail7} />
-      <RecommendedVideo image={thumbnail8} />
+      {data.length > 0 &&
+        data.map((item) => <RecommendedVideo key={item.id} item={item} />)}
     </div>
   );
 }

@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "./Card.css";
 import { converter, date } from "../../utility";
 import moment from "moment";
+import { useRecoilValue } from "recoil";
+import { categoryIdAtom } from "../../atoms/categoryIdAtom";
 
 export default function Card({ item }) {
   return (
