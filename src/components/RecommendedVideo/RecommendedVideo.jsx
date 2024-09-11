@@ -1,5 +1,5 @@
 import "./RecommendedVideo.css";
-import { converter } from "../../utility";
+import { converter, time } from "../../utility";
 import { Link } from "react-router-dom";
 
 export default function RecommendedVideo({ item }) {
@@ -23,6 +23,7 @@ export default function RecommendedVideo({ item }) {
           </p>
         </div>
       </div>
+      <span>{time(item?.contentDetails.duration)}</span>
     </div>
   );
 }

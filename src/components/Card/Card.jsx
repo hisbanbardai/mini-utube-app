@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Card.css";
-import { converter, date } from "../../utility";
+import { converter, date, time } from "../../utility";
 import moment from "moment";
 import { useRecoilValue } from "recoil";
 import { categoryIdAtom } from "../../atoms/categoryIdAtom";
@@ -22,6 +22,9 @@ export default function Card({ item }) {
           <p className="date">{moment(item.snippet.publishedAt).fromNow()} </p>
         </div>
       </div>
+      <span className="video-duration">
+        {time(item.contentDetails.duration)}
+      </span>
     </Link>
   );
 }

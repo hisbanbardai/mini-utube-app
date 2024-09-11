@@ -1,6 +1,7 @@
 .recommended-video {
   display: flex;
   gap: 1rem;
+  position: relative;
 }
 
 .recommended-video-image {
@@ -30,4 +31,15 @@
 
 .recommended-video-video-views {
   font-size: 1.3rem;
+}
+
+.recommended-video span {
+  font-size: 1.2rem;
+  color: #fff;
+  position: absolute;
+  right: 43%;
+  bottom: 5%;
+  background-color: rgba(0, 0, 0, 0.521);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
 }
