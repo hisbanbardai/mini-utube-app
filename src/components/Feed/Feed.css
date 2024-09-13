@@ -11,3 +11,12 @@
 .large {
   margin-left: 5rem;
 }
+
+/* ********************** */
+/* BELOW 1344px (Smaller desktops)*/
+/* ********************** */
+@media (max-width: 75em) {
+  .feed-container {
+    margin-left: 0;
+  }
+}

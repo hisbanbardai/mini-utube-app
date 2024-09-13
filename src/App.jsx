@@ -1,4 +1,5 @@
 import "./App.css";
+import "./styles/queries.css";
 import Header from "../src/components/Header/Header";
 import { Route, Routes } from "react-router-dom";
 import React, { Suspense } from "react";

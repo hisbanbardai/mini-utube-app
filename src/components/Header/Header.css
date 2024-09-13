@@ -36,3 +36,21 @@
   align-items: center;
   gap: 3rem;
 }
+
+/* ********************** */
+/* BELOW 704px (Smaller tablets)*/
+/* ********************** */
+@media (max-width: 44em) {
+  .header-middle {
+    width: 55%;
+  }
+}
+
+/* ********************** */
+/* BELOW 448px (Mobile phones)*/
+/* ********************** */
+@media (max-width: 28em) {
+  .header-middle {
+    display: none;
+  }
+}

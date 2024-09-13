@@ -1,3 +1,21 @@
 .logo-image {
   height: 3rem;
 }
+
+/* ********************** */
+/* BELOW 544px (Mobile phones)*/
+/* ********************** */
+@media (max-width: 34em) {
+  .logo-image {
+    height: 2.5rem;
+  }
+}
+
+/* ********************** */
+/* BELOW 448px (Mobile phones)*/
+/* ********************** */
+@media (max-width: 28em) {
+  .logo-image {
+    height: 3rem;
+  }
+}

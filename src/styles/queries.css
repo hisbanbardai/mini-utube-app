@@ -1,0 +1,17 @@
+/* ********************** */
+/* BELOW 944px (Tablets)*/
+/* ********************** */
+@media (max-width: 59em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* ********************** */
+/* BELOW 544px (Mobile phones)*/
+/* ********************** */
+@media (max-width: 36em) {
+  html {
+    /* font-size: 50%; */
+  }
+}

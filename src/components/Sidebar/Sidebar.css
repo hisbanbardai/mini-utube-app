@@ -51,3 +51,20 @@
   font-size: 1.4rem;
   text-transform: uppercase;
 }
+
+/* ********************** */
+/* BELOW 1344px (Smaller desktops)*/
+/* ********************** */
+@media (max-width: 75em) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.close {
+    display: flex;
+  }
+
+  .large {
+    margin-left: 5rem;
+  }
+}
