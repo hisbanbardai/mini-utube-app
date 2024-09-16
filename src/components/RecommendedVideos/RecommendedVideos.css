@@ -6,3 +6,12 @@
   flex-direction: column;
   gap: 1.6rem;
 }
+
+/* ********************** */
+/* BELOW 944px (Tablets)*/
+/* ********************** */
+@media (max-width: 59em) {
+  .recommended-videos-container {
+    display: none;
+  }
+}

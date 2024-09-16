@@ -6,11 +6,14 @@ export default function RecommendedVideo({ item }) {
   return (
     <div className="recommended-video">
       <Link to={`/video/${item.snippet.categoryId}/${item.id}`}>
-        <img
-          className="recommended-video-image"
-          src={item?.snippet.thumbnails.medium.url}
-          alt=""
-        />
+        <div className="thumbnail-container">
+          <img
+            className="recommended-video-image"
+            src={item?.snippet.thumbnails.medium.url}
+            alt=""
+          />
+          <span>{time(item?.contentDetails.duration)}</span>
+        </div>
       </Link>
       <div className="recommended-video-text">
         <p className="recommended-video-title">{item?.snippet.title}</p>
@@ -23,7 +26,6 @@ export default function RecommendedVideo({ item }) {
           </p>
         </div>
       </div>
-      <span>{time(item?.contentDetails.duration)}</span>
     </div>
   );
 }

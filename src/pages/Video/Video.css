@@ -7,3 +7,13 @@
   padding: 8rem 0 2rem 3rem;
   row-gap: 1rem;
 }
+
+/* ********************** */
+/* BELOW 944px (Tablets)*/
+/* ********************** */
+@media (max-width: 59em) {
+  .video-container {
+    grid-template-columns: 1fr;
+    margin-right: 2rem;
+  }
+}

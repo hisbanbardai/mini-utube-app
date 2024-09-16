@@ -35,7 +35,7 @@ export default function Video() {
   return (
     <div className="video-container">
       <VideoPlayer videoId={videoId} />
-      <RecommendedVideos categoryId={categoryId} />
+      <RecommendedVideos />
       <VideoDetails />
       <ChannelInfo />
       <Comments videoId={videoId} />

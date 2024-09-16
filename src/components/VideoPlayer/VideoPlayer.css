@@ -2,3 +2,12 @@
   width: 100%;
   height: 70vh;
 }
+
+/* ********************** */
+/* BELOW 944px (Tablets)*/
+/* ********************** */
+@media (max-width: 59em) {
+  .video-player iframe {
+    height: 50vw;
+  }
+}

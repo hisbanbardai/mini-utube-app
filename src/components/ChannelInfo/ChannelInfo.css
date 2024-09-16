@@ -53,3 +53,16 @@
   max-width: 93%;
   margin-left: auto;
 }
+
+/* ********************** */
+/* BELOW 1200px (Landscape tablets)*/
+/* ********************** */
+@media (max-width: 75em) {
+  .channel-text .channel-name {
+    font-size: 1.6rem;
+  }
+
+  .channel-subscribers {
+    font-size: 1.2rem;
+  }
+}

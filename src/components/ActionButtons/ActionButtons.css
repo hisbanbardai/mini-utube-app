@@ -16,3 +16,12 @@
 .video-action-buttons span {
   font-size: 1.5rem;
 }
+
+/* ********************** */
+/* BELOW 1200px (Landscape tablets)*/
+/* ********************** */
+@media (max-width: 75em) {
+  .video-action-buttons span {
+    font-size: 1.4rem;
+  }
+}

@@ -12,12 +12,12 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { recommendedVideosAtom } from "../../atoms/recommendedVideosAtom";
 import { useEffect } from "react";
 import axios from "axios";
+import { categoryIdAtom } from "../../atoms/categoryIdAtom";
 const apiKey = import.meta.env.VITE_API_KEY;
 
-export default function RecommendedVideos({ categoryId }) {
-  console.log("recommended videos rendering");
-
+export default function RecommendedVideos() {
   const [data, setData] = useRecoilState(recommendedVideosAtom);
+  const categoryId = useRecoilValue(categoryIdAtom);
 
   useEffect(() => {
     async function fetchRecommendedVideosData() {
