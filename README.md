@@ -1,6 +1,7 @@
-# YouTube Clone - Mini Project
+# Mini Utube App - A Simplified YouTube Project
 
-This is a simplified YouTube clone built with React and Recoil. The application replicates core features of YouTube, allowing users to browse videos by category, play videos, view detailed information, and interact with recommended videos.
+This is a simplified YouTube-like application built with React and Recoil. The app replicates core features of YouTube, allowing users to browse videos by category, play videos, view detailed information, and interact with recommended videos.
+
 
 ## Features
 
@@ -31,7 +32,7 @@ This is a simplified YouTube clone built with React and Recoil. The application 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/your-youtube-clone.git
+   git clone https://github.com/your-repo/mini-utube-app.git
    ```
 2. **Install dependencies**
 
@@ -65,4 +66,4 @@ http://localhost:5173
 
 ## Live Demo
 
-You can access the live demo of the application <a href="https://mini-utube-clone.netlify.app/" target="_blank">here</a>.
+You can access the live demo of the application <a href="https://mini-utube-app.netlify.app/" target="_blank">here</a>.
